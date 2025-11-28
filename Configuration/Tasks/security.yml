@@ -1,6 +1,6 @@
 title: Security Setup
 actions:
   - !cmd:
-      command: 'wmic /Namespace:\\root\default Path SystemRestore Call Enable "C:\"'
+      command: 'powershell -NoProfile -Command "Enable-ComputerRestore -Drive \"C:\""'
   - !cmd:
-      command: 'wmic /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "heyOS Yedek", 100, 12'
+      command: 'powershell -NoProfile -Command "Checkpoint-Computer -Description \"heyOS Yedek\" -RestorePointType \"MODIFY_SETTINGS\""'
