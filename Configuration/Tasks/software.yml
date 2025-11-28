@@ -1,0 +1,4 @@
+title: Software Installation
+actions:
+  - !cmd:
+      command: 'curl -L -o "%TEMP%\FirefoxSetup.exe" "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=tr" & "%TEMP%\FirefoxSetup.exe" -ms & del "%TEMP%\FirefoxSetup.exe"'

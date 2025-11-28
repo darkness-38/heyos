@@ -1,0 +1,12 @@
+title: Network Optimization
+actions:
+  - !cmd:
+      command: 'wmic nicconfig where (IPEnabled=TRUE) call SetDNSServerSearchOrder ("1.1.1.1", "1.0.0.1")'
+  - !cmd:
+      command: 'xcopy /E /I /Y "..\goodbyedpi\x86_64" "%ProgramFiles%\heyOS\GoodByeDPI"'
+  - !cmd:
+      command: 'sc stop GoodbyeDPI & sc delete GoodbyeDPI'
+  - !cmd:
+      command: 'sc create GoodbyeDPI binPath= "\"%ProgramFiles%\heyOS\GoodByeDPI\goodbyedpi.exe\" -5" start= auto'
+  - !cmd:
+      command: 'sc start GoodbyeDPI'

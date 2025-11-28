@@ -1,0 +1,5 @@
+title: Driver Installation
+actions:
+  # PSWindowsUpdate requires PowerShell. Skipped as per request to avoid PowerShell.
+  - !cmd:
+      command: 'echo Driver installation skipped because it requires PowerShell.'

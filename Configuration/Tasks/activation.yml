@@ -1,0 +1,4 @@
+title: Windows Activation
+actions:
+  - !cmd:
+      command: 'call "..\activate.cmd" /HWID'

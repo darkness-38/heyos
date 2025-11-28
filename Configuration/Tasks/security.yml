@@ -1,0 +1,6 @@
+title: Security Setup
+actions:
+  - !cmd:
+      command: 'wmic /Namespace:\\root\default Path SystemRestore Call Enable "C:\"'
+  - !cmd:
+      command: 'wmic /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "heyOS Yedek", 100, 12'

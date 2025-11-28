@@ -1,0 +1,16 @@
+title: APPX Removal
+actions:
+  - !appx: {name: '*People*', type: family}
+  - !appx: {name: '*FeedbackHub*', type: family}
+  - !appx: {name: '*Microsoft.Windows.CloudExperienceHost*', type: family}
+  - !appx: {name: '*ZuneMusic*', type: family}
+  - !appx: {name: '*ZuneVideo*', type: family}
+  - !appx: {name: '*Solitaire*', type: family}
+  - !appx: {name: '*BingNews*', type: family}
+  - !appx: {name: '*StickyNotes*', type: family}
+  - !appx: {name: '*GetHelp*', type: family}
+  - !appx: {name: '*Maps*', type: family}
+  - !appx: {name: '*Cortana*', type: family}
+  - !appx: {name: '*SkypeApp*', type: family}
+  - !appx: {name: '*YourPhone*', type: family}
+  - !appx: {name: '*Windows.Search*', operation: clearCache}

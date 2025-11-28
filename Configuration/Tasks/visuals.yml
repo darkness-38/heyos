@@ -1,0 +1,21 @@
+title: Visual Customizations
+actions:
+    # 1. Windows 11 Eski Sağ Tık Menüsünü Geri Getir (Klasik Menü)
+  - !registryValue: {path: 'HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32', value: '', type: REG_SZ, data: ''}
+
+    # 2. Sistem Genelinde Karanlık Modu (Dark Mode) Aç
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'AppsUseLightTheme', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'SystemUsesLightTheme', type: REG_DWORD, data: '0'}
+
+    # 3. Saydamlık Efektlerini Kapat (Performans İçin - İsteğe Bağlı)
+    # Görsellik istiyorsanız bu satırı silin. Hız istiyorsanız kalsın.
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'EnableTransparency', type: REG_DWORD, data: '0'}
+
+    # 4. Dosya Gezgini Ayarları (Bu Bilgisayar ile başla, Uzantıları Göster)
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'LaunchTo', type: REG_DWORD, data: '1'} # Bu Bilgisayar
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'HideFileExt', type: REG_DWORD, data: '0'} # Uzantıları Göster
+  # Windows 11 Görev Çubuğunu Sola Yasla (0 = Sol, 1 = Orta)
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'TaskbarAl', type: REG_DWORD, data: '0'}
+  
+    # Sohbet (Chat) Simgesini Görev Çubuğundan Kaldır
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'TaskbarMn', type: REG_DWORD, data: '0'}

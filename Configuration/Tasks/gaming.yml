@@ -1,0 +1,4 @@
+title: Gaming Components
+actions:
+  - !cmd:
+      command: 'dism /online /enable-feature /featurename:DirectPlay /all /norestart'

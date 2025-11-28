@@ -1,0 +1,12 @@
+title: Wallpaper Setup
+actions:
+  - !cmd:
+      command: 'if exist "..\heyos_bg.jpg" (copy /Y "..\heyos_bg.jpg" "%USERPROFILE%\Pictures\heyOS_Wallpaper.jpg") else (copy /Y "heyos_bg.jpg" "%USERPROFILE%\Pictures\heyOS_Wallpaper.jpg")'
+  - !cmd:
+      command: 'reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%USERPROFILE%\Pictures\heyOS_Wallpaper.jpg" /f'
+  - !cmd:
+      command: 'reg add "HKCU\Control Panel\Desktop" /v WallpaperStyle /t REG_SZ /d "10" /f'
+  - !cmd:
+      command: 'reg add "HKCU\Control Panel\Desktop" /v TileWallpaper /t REG_SZ /d "0" /f'
+  - !cmd:
+      command: 'powershell -NoProfile -Command "Add-Type -TypeDefinition ''using System.Runtime.InteropServices; public class Win32 { [DllImport(\"user32.dll\")] public static extern int SystemParametersInfo(int u, int v, string s, int f); }'' -Language CSharp; [Win32]::SystemParametersInfo(20, 0, \"$env:USERPROFILE\Pictures\heyOS_Wallpaper.jpg\", 3)"'

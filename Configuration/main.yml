@@ -1,0 +1,31 @@
+title: heyOS - Ultimate Performance Edition v1.1
+actions:
+  - !writeStatus: {status: '-> [Güvenlik] Sistem Koruması ve Geri Yükleme Noktası...'}
+  - !task: {path: 'Tasks/security.yml'}
+
+  - !writeStatus: {status: '-> [Sistem] heyOS OEM İmzası İşleniyor...'}
+  - !task: {path: 'Tasks/branding.yml'}
+
+  - !writeStatus: {status: '-> [Görsel] Özel heyOS Duvar Kağıdı Uygulanıyor...'}
+  - !task: {path: 'Tasks/wallpaper.yml'}
+
+  - !writeStatus: {status: '-> [Görsel] Karanlık Mod ve Arayüz Ayarları...'}
+  - !task: {path: 'Tasks/visuals.yml'}
+
+  - !writeStatus: {status: '-> [Temizlik] Bloatware Kaldırılıyor...'}
+  - !task: {path: 'Tasks/appx.yml'}
+
+  - !writeStatus: {status: '-> [Sistem] Hizmetler Optimize Ediliyor...'}
+  - !task: {path: 'Tasks/services.yml'}
+
+  - !writeStatus: {status: '-> [Sistem] Registry ve Performans Ayarları...'}
+  - !task: {path: 'Tasks/registry.yml'}
+
+  - !writeStatus: {status: '-> [Oyun] DirectPlay ve Runtimes Kuruluyor...'}
+  - !task: {path: 'Tasks/gaming.yml'}
+
+  - !writeStatus: {status: '-> [Ağ] DNS ve GoodByeDPI Ayarlanıyor...'}
+  - !task: {path: 'Tasks/network.yml'}
+
+
+  - !writeStatus: {status: '*** KURULUM BİTTİ! ***'}

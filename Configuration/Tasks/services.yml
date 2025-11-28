@@ -1,0 +1,8 @@
+title: Service Configuration
+actions:
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\DiagTrack', value: 'Start', type: REG_DWORD, data: '4'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\PcaSvc', value: 'Start', type: REG_DWORD, data: '4'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\WSearch', value: 'Start', type: REG_DWORD, data: '4'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\SysMain', value: 'Start', type: REG_DWORD, data: '4'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\MapsBroker', value: 'Start', type: REG_DWORD, data: '4'}
+  - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\WerSvc', value: 'Start', type: REG_DWORD, data: '4'}

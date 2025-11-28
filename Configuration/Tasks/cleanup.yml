@@ -1,0 +1,10 @@
+title: Final Cleanup
+actions:
+  - !cmd:
+      command: 'del /q /f /s "%TEMP%\*" & rd /s /q "%TEMP%"'
+  - !cmd:
+      command: 'del /q /f /s "%WINDIR%\Temp\*" & rd /s /q "%WINDIR%\Temp"'
+  - !cmd:
+      command: 'del /q /f /s "%WINDIR%\Prefetch\*"'
+  - !cmd:
+      command: 'mkdir "%USERPROFILE%\Desktop\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"'
